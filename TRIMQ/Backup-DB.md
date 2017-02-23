@@ -3,8 +3,8 @@
 Tài liệu sẽ được cập nhật thêm...
 
 # Mục lục:
-[1. Cài đặt Wordpress](#1)
-[2. Backup database của Wordpress](#2)
+- [1. Cài đặt Wordpress](#1)
+- [2. Backup database của Wordpress](#2)
 
 ----------------------------------
 
