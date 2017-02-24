@@ -6,6 +6,7 @@ Tài liệu sẽ được cập nhật thêm...
 - [1. Cài đặt Wordpress](#1)
 - [2. Backup database của Wordpress](#2)
 - [3. Backup các tables trong database](#3)
+- [4. Tài liệu tham khảo](#4)
 
 ----------------------------------
 
@@ -230,10 +231,10 @@ mysqldump -u -p DB_NAME TABLE_NAME1 TABLE_NAME2 > TABLE_NAME.sql
 mysql -u -p DB_NAME < TABLE_NAME.sql
 ```
 
-
-
-
-
+<a name="4"></a>
+## 4. Tài liệu tham khảo:
+- (1) http://stackoverflow.com/questions/9696249/restoring-a-mysql-table-back-to-the-database
+- (2) http://hocvps.com/cac-cau-lenh-mysql-can-phai-biet/
 
 
 
