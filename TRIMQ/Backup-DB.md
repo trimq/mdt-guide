@@ -5,6 +5,7 @@ Tài liệu sẽ được cập nhật thêm...
 # Mục lục:
 - [1. Cài đặt Wordpress](#1)
 - [2. Backup database của Wordpress](#2)
+- [3. Backup các tables trong database](#3)
 
 ----------------------------------
 
@@ -170,6 +171,65 @@ mysql wordpress < backupsql.sql
 ```sh
 scp backupmysql.sql root@192.168.100.35:/home/backupdb
 ```
+
+<a name="3"></a>
+## 3. Backup các tables trong database
+- Sử dụng câu lệnh `mysqldump` để backup các tables trong database
+
+- Đăng nhập vào database
+
+```sh
+mysql -u root -p
+```
+
+- Xem các database
+
+```sh
+show databases;
+
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| wordpress          |
++--------------------+
+4 rows in set (0.00 sec)
+```
+
+- Xem các tables của 1 database
+
+==> Chọn 1 database để sử dụng
+
+```sh
+use DB_name;
+```
+
+==> Xem các tables của database đó
+
+```sh
+show tables;
+```
+
+- Tạo backup cho 1 bảng trong database:
+
+```sh
+mysqldump -u -p DB_NAME TABLE_NAME > TABLE_NAME.sql
+```
+
+- Tạo backup cho nhiều bảng trong database:
+
+```sh
+mysqldump -u -p DB_NAME TABLE_NAME1 TABLE_NAME2 > TABLE_NAME.sql
+```
+
+- Restore lại tables trong trường hợp tables bị mất:
+
+```sh
+mysql -u -p DB_NAME < TABLE_NAME.sql
+```
+
 
 
 
